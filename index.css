@@ -66,3 +66,8 @@
     color: #666;
     font-size: 14px;
 }
+
+.filter-btn{
+    cursor: pointer;
+    margin: 10px
+}

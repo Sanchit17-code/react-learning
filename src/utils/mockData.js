@@ -1,25 +1,3 @@
-import React from "react"
-import ReactDom from "react-dom/client"
-
-
-const Header = ()=>{
-    return (
-        <div className="header">
-            <div className="logo-container">
-                <img className="logo" src="https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png?nwm=1&nws=1&industry=fast-food&sf=&txt_keyword=All"/>
-            </div>
-            <div className="nav-items">
-            <ul>
-                <li>Home</li>
-                <li>About Us</li>
-                <li>Contact US</li>
-                <li>Cart</li>
-            </ul>
-            </div>
-        </div>
-    )
-}
-
 const resList = [
     {
         resName: "Meghana Foods",
@@ -128,47 +106,4 @@ const resList = [
     }
 ];
 
-const RestaurantCard = ({resName, cuisine, rating, deliveryTime, imageUrl}) => {
-    return (
-        <div className="res-card">
-            <img 
-                className="res-logo"
-                alt="res-logo"
-                src={imageUrl}
-            />
-            <h3>{resName}</h3>
-            <h4>{cuisine}</h4>
-            <h4>{rating} stars</h4>
-            <h4>{deliveryTime}</h4>
-        </div>
-    )
-}
-
-const Body = () => {
-    return (
-        <div className="body">
-           <div className="search">Search</div>
-           <div className="res-container">
-                {resList.map((restaurant) => (
-                    <RestaurantCard 
-                        key={restaurant.resName} 
-                        {...restaurant}
-                    />
-                ))}
-           </div>
-        </div>
-    )
-}
-
-const AppLayout = () => {
-    return (
-        <div className="app">
-            <Header/>
-            <Body/>
-        </div>
-    )
-}
-
-const root = ReactDom.createRoot(document.getElementById("root"))
-root.render(<AppLayout />)
-
+export default resList;
