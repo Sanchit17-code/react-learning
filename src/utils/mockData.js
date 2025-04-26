@@ -9,7 +9,7 @@ const resList = [
     {
         resName: "KFC",
         cuisine: "Fast Food",
-        rating: "4.2",
+        rating: "2",
         deliveryTime: "25 min",
         imageUrl: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/56c9ab92bd79745fd152a30fa2525426"
     },
@@ -44,14 +44,14 @@ const resList = [
     {
         resName: "Beijing Bites",
         cuisine: "Chinese, Thai, Pan Asian",
-        rating: "4.3",
+        rating: "3.9",
         deliveryTime: "28 min",
         imageUrl: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/4a3b48488e3aa9bda13efd8cfcd95284"
     },
     {
         resName: "Paradise Biryani",
         cuisine: "Biryani, Hyderabadi",
-        rating: "4.6",
+        rating: "0",
         deliveryTime: "32 min",
         imageUrl: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/yktanq9i7yfjrixaghuj"
     },
@@ -72,14 +72,14 @@ const resList = [
     {
         resName: "Wow! Momo",
         cuisine: "Tibetan, Healthy Food",
-        rating: "4.3",
+        rating: "3",
         deliveryTime: "22 min",
         imageUrl: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/5a148e63e9c54942e37627da1aa156be"
     },
     {
         resName: "Behrouz Biryani",
         cuisine: "Biryani, Mughlai, Lucknowi",
-        rating: "4.4",
+        rating: "0",
         deliveryTime: "35 min",
         imageUrl: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/89fccaa76f2f760e2742b9e53d32bb69"
     },
