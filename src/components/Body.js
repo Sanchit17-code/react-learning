@@ -50,7 +50,7 @@ const Body = () => {
                         const filteredList = listOfRestaurants.filter((res) => {
                             return res.rating > 4;
                         });
-                        setListOfRestaurant(filteredList);
+                        setFilteredRestaurant(filteredList);
                     }}
                 >
                     Top rated restaurants
