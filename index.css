@@ -71,3 +71,14 @@
     cursor: pointer;
     margin: 10px
 }
+
+.filter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    margin-top: 10px;
+}
