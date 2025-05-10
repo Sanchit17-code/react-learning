@@ -30,6 +30,16 @@
     padding: 20px;
     justify-content: start;
 }
+.res-container a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.res-container a:hover {
+    text-decoration: none;
+}
+
 .res-card{
     width: 250px;
     padding: 10px;
