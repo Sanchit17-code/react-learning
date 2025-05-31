@@ -14,7 +14,7 @@ const Body = () => {
         return new Promise((resolve) => {
             setTimeout(() => {
                 resolve(resList);
-            }, 2000);
+            }, 500);
         });
     };
 
