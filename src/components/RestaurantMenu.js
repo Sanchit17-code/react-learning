@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import resList from "../utils/mockData"; // Import mock menu data
-
+import RestaurantCategory from "./RestaurantCategory";
 const RestaurantMenu = () => {
     const { resId } = useParams(); // Get the resId from the route
     const [restaurant, setRestaurant] = useState(null);
-    
+    const [categories, setCategories] = useState([]);
+    const [showIndex, setShowIndex] = useState(1);
+
     useEffect(() => {
         // Simulate fetching data with a delay of 1 second
         const fetchMenu = async () => {
@@ -14,6 +16,7 @@ const RestaurantMenu = () => {
             console.log("resList", resList);
             const selectedRestaurant = resList.find((res) => res.id === parseInt(resId)); // Find menu by id
             setRestaurant(selectedRestaurant);
+            setCategories(selectedRestaurant.categories);
         };
         fetchMenu();
     }, [resId]);
@@ -23,14 +26,25 @@ const RestaurantMenu = () => {
     }
 
     return (
-        <div className="menu">
-            <h1>{restaurant.resName}</h1>
-            <h2>Menu</h2>
-            <ul className="menu-list">
-                {restaurant.menu.map((item, index) => (
-                    <li key={index}>{item.name}</li>
-                ))}
-            </ul>
+        <div className="text-center">
+            <h1 className="font-bold my-6 text-2xl">{restaurant.resName}</h1>
+            <h2 className="text-lg font-bold">{restaurant.cuisine}</h2>
+            {categories.map((category,index)=>{
+                return ( 
+                <RestaurantCategory
+                    key={category.name}
+                    {...category}
+                    showItems = {showIndex== index ? true : false}
+                    setIndex = {()=>{
+                        if(showIndex != index){
+                            setShowIndex(index)
+                        }
+                        else{
+                            setShowIndex(null)
+                        }
+                    }}
+                 /> )
+            })}
         </div>
     );
 };
